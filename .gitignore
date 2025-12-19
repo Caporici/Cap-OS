@@ -1,0 +1,30 @@
+# --- Yocto/Bitbake Temporary Files ---
+build/tmp/
+build/sstate-cache/
+build/cache/
+build/downloads/
+build/pseudodone
+
+# --- Output Images (Onde fica o seu .wic) ---
+build/tmp/deploy/images/
+
+# --- Logs e arquivos de estado ---
+build/bitbake-cookerdaemon.log
+build/conf/sanity_info
+*.log
+*.pyc
+*.swp
+
+# --- Se você usa o Toaster ---
+build/toaster*
+build/bitbake.lock
+
+# --- Layers de terceiros (Opcional) ---
+# Se você quiser que o seu repo seja leve, ignore as layers base 
+# e versiona apenas a sua 'meta-capos'. 
+# Se preferir o projeto completo "tudo em um", comente as linhas abaixo:
+# bitbake/
+# meta/
+# meta-poky/
+# meta-yocto-bsp/
+# meta-raspberrypi/
