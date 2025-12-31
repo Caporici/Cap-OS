@@ -45,5 +45,17 @@
         "**/tmp*/**",
         "**/workspace/attic/**",
         "**/workspace/sources/**"
+    ],
+    "files.associations": {
+        "*.conf": "bitbake",
+        "*.inc": "bitbake"
+    },
+    "python.autoComplete.extraPaths": [
+        "${workspaceFolder}/bitbake/lib",
+        "${workspaceFolder}/meta/lib"
+    ],
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/bitbake/lib",
+        "${workspaceFolder}/meta/lib"
     ]
 }
