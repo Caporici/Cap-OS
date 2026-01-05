@@ -1,0 +1,21 @@
+[Unit]
+Description=Framebuffer Boot Logo
+DefaultDependencies=no
+
+# We want to run it as soon as udev maps the devices
+After=systemd-udevd.service
+
+# But we want to run it BEFORE anything that requires login or network access
+Before=sysinit.target
+
+[Service]
+Type=oneshot
+# Gives full priority to the processor to focus on this task
+Nice=-20
+ExecStart=/usr/bin/bootlogo.sh
+RemainAfterExit=yes
+
+[Install]
+
+# sysinit.target is the earliest place systemd can run something
+WantedBy=sysinit.target
